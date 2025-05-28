@@ -34,7 +34,7 @@ async def stand(update: Update, context: CallbackContext.DEFAULT_TYPE):
     score = game.get_score(user_id)
     game.stand(user_id)
 await update.message.reply_text(f"你选择停牌，最终点数：{score}。")
-等待其他玩家操作…")
+await update.message.reply_text("等待其他玩家操作...")
 
 async def balance(update: Update, context: CallbackContext.DEFAULT_TYPE):
     user_id = update.effective_user.id
